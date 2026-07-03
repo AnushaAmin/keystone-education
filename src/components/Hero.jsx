@@ -1,69 +1,94 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import AssessmentModal from "./AssessmentModal";
 
 export default function Hero() {
+  const [assessmentOpen, setAssessmentOpen] = useState(false);
+
+  const scrollToWhy = () => {
+    const section = document.getElementById("why");
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="min-h-screen flex items-center">
+    <>
+      <section className="min-h-screen flex items-center">
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
 
-          <span className="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full">
+            <span className="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full font-semibold">
+              Trusted Online Tuition
+            </span>
 
-            Trusted Online Tuition
+            <h1 className="text-6xl font-black mt-6 leading-tight text-slate-900">
+              Helping Students
+              <br />
+              Achieve Their
+              <br />
+              Full Potential
+            </h1>
 
-          </span>
+            <p className="mt-6 text-lg text-slate-600 max-w-xl">
+              Specialist online tuition for <strong>11+</strong>,{" "}
+              <strong>12+</strong> and <strong>GCSE</strong> students in
+              Maths, English and Science. Our personalised lessons help
+              students build confidence, improve grades and achieve exam
+              success from the comfort of home.
+            </p>
 
-          <h1 className="text-6xl font-black mt-6 leading-tight text-slate-900">
+            <div className="flex flex-wrap gap-4 mt-8">
 
-            Helping Students
-            Excel In
-            11+, 12+ &
-            GCSE Exams
+              <button
+                onClick={() => setAssessmentOpen(true)}
+                className="bg-yellow-500 hover:bg-yellow-400 transition px-6 py-4 rounded-xl font-bold shadow-lg"
+              >
+                Book Free Assessment
+              </button>
 
-          </h1>
+              <button
+                onClick={scrollToWhy}
+                className="border border-slate-300 hover:bg-slate-100 transition px-6 py-4 rounded-xl font-semibold"
+              >
+                Learn More
+              </button>
 
-          <p className="mt-6 text-lg text-slate-600 max-w-xl">
+            </div>
 
-            Expert tuition in Maths,
-            English and Science.
-            Helping students build confidence,
-            improve grades and achieve success.
+          </motion.div>
 
-          </p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
 
-          <div className="flex gap-4 mt-8">
+            <img
+              src="https://images.unsplash.com/photo-1503676382389-4809596d5290"
+              alt="Student learning online"
+              className="rounded-3xl shadow-2xl w-full object-cover"
+            />
 
-            <button className="bg-yellow-500 px-6 py-4 rounded-xl font-bold">
-              Book Assessment
-            </button>
+          </motion.div>
 
-            <button className="border border-slate-300 px-6 py-4 rounded-xl">
-              Learn More
-            </button>
+        </div>
 
-          </div>
+      </section>
 
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-        >
-
-          <img
-            src="https://images.unsplash.com/photo-1503676382389-4809596d5290"
-            alt=""
-            className="rounded-3xl shadow-2xl"
-          />
-
-        </motion.div>
-
-      </div>
-
-    </section>
+      <AssessmentModal
+        open={assessmentOpen}
+        onClose={() => setAssessmentOpen(false)}
+      />
+    </>
   );
 }

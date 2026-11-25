@@ -27,24 +27,22 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
 
-            <span className="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full font-semibold">
+            {/* <span className="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full font-semibold">
               Trusted Online Tuition
-            </span>
+            </span> */}
 
             <h1 className="text-6xl font-black mt-6 leading-tight text-slate-900">
-              Helping Students
+              Helping Your Child
               <br />
-              Achieve Their
+              Succeed in the 
               <br />
-              Full Potential
+              11 + , 12 + and GCSE Exams
             </h1>
 
             <p className="mt-6 text-lg text-slate-600 max-w-xl">
-              Specialist online tuition for <strong>11+</strong>,{" "}
-              <strong>12+</strong> and <strong>GCSE</strong> students in
-              Maths, English and Science. Our personalised lessons help
-              students build confidence, improve grades and achieve exam
-              success from the comfort of home.
+              Personalised online tuition for <strong>Maths,</strong>,{" "}
+              <strong>English,</strong> and <strong>Science,</strong> designed to strengthen understanding, 
+              build confidence and prepare students for exams.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">

@@ -30,7 +30,7 @@ export default function Hero() {
             {/* <span className="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full font-semibold">
               Trusted Online Tuition
             </span> */}
-            <br />
+            <br /> <br /> <br /> 
             <h1 className="text-6xl font-black mt-6 leading-tight text-slate-900">
               Helping Your Child
               <br />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import ContactModal from "./ContactModal";
 
 export default function Footer() {
@@ -53,22 +53,37 @@ export default function Footer() {
 
             <div className="flex gap-5 text-3xl">
 
+              {/* Instagram */}
               <a
                 href="https://www.instagram.com/keystoneeducationofficial/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="hover:text-yellow-400 transition"
               >
                 <FaInstagram />
               </a>
 
+              {/* Facebook */}
               <a
                 href="https://www.facebook.com/profile.php?id=61591091382720"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
                 className="hover:text-yellow-400 transition"
               >
                 <FaFacebook />
+              </a>
+
+              {/* YouTube */}
+              <a
+                href="https://www.youtube.com/@Keystone-education-official"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="hover:text-yellow-400 transition"
+              >
+                <FaYoutube />
               </a>
 
             </div>

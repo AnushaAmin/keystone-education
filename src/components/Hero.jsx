@@ -36,14 +36,15 @@ export default function Hero() {
               <br />
               Succeed in the 
               <br />
-              11 + , 12 + and GCSE Exams
+              11+, 12+ and GCSE.
             </h1>
 
             <p className="mt-6 text-lg text-slate-600 max-w-xl">
-              Personalised online tuition for <strong>Maths,</strong>,{" "}
-              <strong>English,</strong> and <strong>Science,</strong> designed to strengthen understanding, 
-              build confidence and prepare students for exams.
-            </p>
+                Personalised online tuition in{" "}
+                <strong>Maths, English and Science</strong>,
+                designed to strengthen understanding, build confidence
+                and prepare students for exams.
+              </p>
 
             <div className="flex flex-wrap gap-4 mt-8">
 
@@ -51,7 +52,7 @@ export default function Hero() {
                 onClick={() => setAssessmentOpen(true)}
                 className="bg-yellow-500 hover:bg-yellow-400 transition px-6 py-4 rounded-xl font-bold shadow-lg"
               >
-                Book Free Assessment
+                Book Your Free Assessment
               </button>
 
               <button

@@ -3,7 +3,8 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Subjects from "./components/Subjects";
 import WhyUs from "./components/WhyUs";
-import Testimonials from "./components/Testimonials";
+// import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 import HowItWorks from "./components/HowItWorks";
 // import Contact from "./components/Contact";
 import Reviews from "./components/Reviews";
@@ -21,8 +22,8 @@ export default function App() {
       {/* ADD REVIEWS HERE */}
       <Reviews />
 
-      <Testimonials />
-      {/* <Contact /> */}
+      {/* <Testimonials /> */}
+      <Contact />
 
       {/* ADD FOOTER LAST */}
       <Footer />
